@@ -11,7 +11,7 @@ public final class ShaUtils {
 
     private static final Charset UTF_8 = StandardCharsets.UTF_8;
     private static final String SHA_ALGORITHM = "SHA-256";
-
+    
     private ShaUtils() {
         super();
     }

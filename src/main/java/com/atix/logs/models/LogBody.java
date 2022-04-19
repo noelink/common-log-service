@@ -10,7 +10,7 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import lombok.Data;
 
 @Data
-public class LogBoby {
+public class LogBody {
 	
 	private String prev_hash;
 	private String message;

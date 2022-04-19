@@ -11,16 +11,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.atix.logs.models.LogBoby;
+import com.atix.logs.models.LogBody;
 import com.atix.logs.utils.ShaUtils;
 
 @RestController
 public class LoggingController {
 	
-	private final Logger LOGGER = LoggerFactory.getLogger(LoggingController.class);
+	private final Logger LOGGER = LoggerFactory.getLogger(LoggingController.class);	
 	
 	@PostMapping("managed-logs")
-    public ResponseEntity<LogBoby> createLogMessage(@RequestBody LogBoby logBody) {
+    public ResponseEntity<LogBody> createLogMessage(@RequestBody LogBody logBody) {
 		logBody.setCreationDate(LocalDateTime.now());
 		logBody.setPrev_hash(ShaUtils.generateRandomLineHash());
 		StringBuilder nonceBuilder = new StringBuilder();
